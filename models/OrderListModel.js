@@ -3,7 +3,7 @@ const mongoose =require('mongoose');
 const OrderlistSchema = mongoose.Schema({
 	MenuList:[
 		{
-			Name: String,
+			OrderName: String,
 			ChooseMenu: [
 				{
 					ExtraMenu: String,
