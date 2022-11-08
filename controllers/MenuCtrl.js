@@ -26,9 +26,11 @@ const MenuCtrl = {
 		try{
 			const MenuName = req.body.MenuName
 			const ExtraMenu = req.body.ExtraMenu
+			const MainPrice = req.body.MainPrice
 			const NewMenu = new Menu({
 				MenuName: MenuName,
-				ExtraMenu: ExtraMenu
+				ExtraMenu: ExtraMenu,
+				MainPrice: MainPrice
 			}) 
 			await NewMenu.save()
 			res.send("Add New Order Successfuly !!!")
