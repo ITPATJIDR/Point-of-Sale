@@ -5,6 +5,9 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const app = express();
 const PORT = process.env.PORT || 5000
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 app.use(cookieParser());
 app.use(express.json())
@@ -18,7 +21,7 @@ app.get("/",(req,res)=>{
 })
 
 mongoose.connect(
-	keys.mogodbURI,
+	process.env.MONGODB_URI,
 	{
 		useNewUrlParser: true,
 		useUnifiedTopology: true
