@@ -10,7 +10,8 @@ const OrderlistSchema = mongoose.Schema({
 					ChooseExtraMenu: String,
 					Price:Number
 				}
-			]
+			],
+			OrderPrice: Number
 		}
 	]
 })
