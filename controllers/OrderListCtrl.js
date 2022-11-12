@@ -4,6 +4,7 @@ const OrderListCtrl = {
 	addOrder: async (req,res) =>{
 		try{
 			const OrderData = req.body
+			console.log(OrderData)
 			const NewOrder = new OrderList({
 				MenuList: OrderData,
 			})
