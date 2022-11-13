@@ -3,10 +3,11 @@ const OrderList = require('../models/OrderListModel')
 const OrderListCtrl = {
 	addOrder: async (req,res) =>{
 		try{
-			const OrderData = req.body
-			console.log(OrderData)
+			const {OrderName, ChooseMenu ,OrderPrice} = req.body 
 			const NewOrder = new OrderList({
-				MenuList: OrderData,
+				OrderName: OrderName,
+				ChooseMenu: ChooseMenu,
+				OrderPrice: OrderPrice
 			})
 			await NewOrder.save()
 			res.send("Add New Order Successfuly !!!")
