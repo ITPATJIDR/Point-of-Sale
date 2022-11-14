@@ -11,7 +11,7 @@ dotenv.config();
 
 app.use(cookieParser());
 app.use(express.json())
-app.use(cors({origin:["http://localhost:3000","https://point-of-sale-backend.vercel.app/"],credentials:true}));
+app.use(cors({origin:["http://localhost:3000","https://point-of-sale-backend.vercel.app","https://point-of-sale-front-end.vercel.app"],credentials:true}));
 
 app.use("/menu",require("./routers/MenuRouter"))
 app.use("/order",require("./routers/OrderListRouter"))
