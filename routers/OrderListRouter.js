@@ -5,5 +5,6 @@ router.post('/addOrder',OrderListCtrl.addOrder)
 router.get('/getOrder',OrderListCtrl.getOrder)
 router.post('/deleteOrder',OrderListCtrl.deleteOrder)
 router.get('/getAllOrder',OrderListCtrl.getAllOrder)
+router.get('/deleteAllOrder',OrderListCtrl.deleteAllOrder)
 
 module.exports = router

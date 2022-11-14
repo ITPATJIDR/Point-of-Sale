@@ -44,6 +44,16 @@ const OrderListCtrl = {
 			})
 		}
 	},
+	deleteAllOrder: async (req,res) =>{
+		try{
+			await OrderList.deleteMany();
+			res.send("Delete All Order Successfuly !!!")
+		} catch(err){
+			res.json({
+				msg: err.message
+			})
+		}
+	},
 	getAllOrder: async (req,res) =>{
 		try{
 			const fetchAllOrder = await OrderList.find() 
